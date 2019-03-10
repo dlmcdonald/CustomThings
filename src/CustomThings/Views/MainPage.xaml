@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+    Title="{Binding Title}"
+    x:Class="CustomThings.Views.MainPage"
+    xmlns:cr="clr-namespace:CustomThings.CustomRenderers"
+    xmlns:eff="clr-namespace:CustomThings.Effects"
+    xmlns:controls="clr-namespace:CustomThings.Controls">
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Label
+            Text="Custom Controls!"
+            Margin="0, 0, 0, 20" />
+        <Label
+            Text="Name" />
+        <Entry
+            HorizontalOptions="FillAndExpand"
+            Placeholder="This is an entry" />
+        <cr:CustomEntry
+            Placeholder="This is a custom entry" />
+        <Entry
+            Placeholder="This is an entry with an effect">
+            <Entry.Effects>
+                <eff:BorderlessEntryEffect />
+            </Entry.Effects>
+        </Entry>
+        <Label
+            Text="Name" />
+        <Entry
+            Placeholder="Name">
+            <Entry.Effects>
+                <eff:BorderlessEntryEffect />
+            </Entry.Effects>
+        </Entry>
+        <BoxView
+            HeightRequest="1"
+            BackgroundColor="LimeGreen"
+            HorizontalOptions="FillAndExpand" />
+        <controls:FormEntry
+            Placeholder="Test Placeholder"
+            Title="Test Title"
+            ActiveColor="Blue"
+            InactiveColour="Gray" />
+    </StackLayout>
+</ContentPage>

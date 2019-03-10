@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StackLayout
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CustomThings.Controls.FormEntry"
+    xmlns:eff="clr-namespace:CustomThings.Effects">
+    <Label
+        x:Name="titleLabel"
+        Text="Surname" />
+    <Entry
+        x:Name="entry"
+        Placeholder="Surname">
+        <Entry.Effects>
+            <eff:BorderlessEntryEffect />
+        </Entry.Effects>
+    </Entry>
+    <BoxView
+        x:Name="line"
+        HeightRequest="1"
+        BackgroundColor="LimeGreen"
+        HorizontalOptions="FillAndExpand" />
+</StackLayout>
