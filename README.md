@@ -1,1 +1,1 @@
-# CustomThingsTemplate
+# CustomThings Example
